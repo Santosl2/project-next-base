@@ -1,3 +1,4 @@
+/* eslint-disable react/no-invalid-html-attribute */
 import Document, {
   Html,
   Head,

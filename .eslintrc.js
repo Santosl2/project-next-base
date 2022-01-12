@@ -6,12 +6,14 @@ module.exports = {
   extends: [
     "plugin:react/recommended",
     "airbnb",
+    "prettier",
     "plugin:@typescript-eslint/recommended",
     "plugin:react-hooks/recommended",
-    "prettier",
-    "prettier/react",
+    "plugin:prettier/recommended",
+    "plugin:react/jsx-runtime",
   ],
-  parser: "babel-eslint",
+
+  parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -19,8 +21,24 @@ module.exports = {
     ecmaVersion: 13,
     sourceType: "module",
   },
-  plugins: ["react", "@typescript-eslint", "eslint-plugin-import-helpers"],
+  plugins: [
+    "react",
+    "@typescript-eslint",
+    "eslint-plugin-import-helpers",
+    "unused-imports",
+  ],
   rules: {
+    "@typescript-eslint/no-unused-vars": "off", // or "@typescript-eslint/no-unused-vars": "off",
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        vars: "all",
+        varsIgnorePattern: "^_",
+        args: "after-used",
+        argsIgnorePattern: "^_",
+      },
+    ],
     "import-helpers/order-imports": [
       "warn",
       {
@@ -37,6 +55,6 @@ module.exports = {
       { extensions: [".js", ".jsx", ".ts", ".tsx"] },
     ],
     "import/prefer-default-export": "off",
-    "jsx-quotes": ["error", "prefer-single"],
+    "jsx-quotes": ["error", "prefer-double"],
   },
 };

@@ -1,5 +1,6 @@
+import { Header } from "@/components/Header";
 import type { NextPage } from "next";
 
-const Home: NextPage = () => <h1>Hello World</h1>;
+const Home: NextPage = () => <Header />;
 
 export default Home;
