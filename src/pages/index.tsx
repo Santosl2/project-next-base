@@ -1,6 +1,11 @@
 import { Header } from "@/components/Header";
-import type { NextPage } from "next";
+import { SEO } from "@/SEO";
 
-const Home: NextPage = () => <Header />;
-
-export default Home;
+export default function Home() {
+  return (
+    <>
+      <SEO title="Teste" />
+      <Header />
+    </>
+  );
+}
