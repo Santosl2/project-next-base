@@ -36,11 +36,13 @@ Just clone this repo or use as a template and enjoy!
   - services (API Call config)
  
  You can see an exemple of this project structure here:
+ 
  [GitHub Finder](https://github.com/Santosl2/github-finder)
- [Blog MFilype Dev](https://github.com/Santosl2/mfilypedev)
+ 
+ [Blog Mfilype Dev](https://github.com/Santosl2/mfilypedev)
  
  
-<br/><br/>
+<br/>
 
 Thanks!
     
