@@ -1,7 +1,9 @@
+import { HeaderWrapper } from "./Header.styles";
+
 export function Header(): JSX.Element {
   return (
-    <div>
+    <HeaderWrapper>
       <h1>Hello World</h1>
-    </div>
+    </HeaderWrapper>
   );
 }
