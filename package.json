@@ -7,10 +7,11 @@
     "start": "next start",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "lint": "eslint ./",
     "lint-fix": "eslint ./ --fix",
-    "husky-install": "husky install"
+    "prepare": "husky install",
+    "husky-pass": "lint-staged && test"
   },
   "dependencies": {
     "next": "^12.1.6",
@@ -55,6 +56,7 @@
     "husky": "^8.0.1",
     "jest": "^28.1.1",
     "jest-environment-jsdom": "^28.1.1",
+    "lint-staged": "^13.0.2",
     "prettier": "^2.5.1",
     "typescript": "4.7.4"
   }
