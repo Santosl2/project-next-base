@@ -17,7 +17,6 @@ module.exports = {
     "plugin:storybook/recommended",
   ],
   overrides: [
-    // Only uses Testing Library lint rules in test files
     {
       files: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
       extends: ["plugin:testing-library/react"],
@@ -39,6 +38,10 @@ module.exports = {
     "testing-library",
   ],
   settings: {
+    "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"],
+    },
     "import/resolver": {
       typescript: {},
       node: {
@@ -51,6 +54,8 @@ module.exports = {
       "error",
       "ignorePackages",
       {
+        js: "never",
+        jsx: "never",
         ts: "never",
         tsx: "never",
       },
@@ -76,9 +81,7 @@ module.exports = {
     "import-helpers/order-imports": [
       "warn",
       {
-        // example configuration
         newlinesBetween: "always",
-        // new line between groups
         groups: ["/^react/", "module", "/^@/", ["parent", "sibling", "index"]],
         alphabetize: {
           order: "asc",
@@ -102,5 +105,9 @@ module.exports = {
     ],
     "import/prefer-default-export": "off",
     "jsx-quotes": ["error", "prefer-double"],
+    "import/no-extraneous-dependencies": [
+      "error",
+      { devDependencies: ["**/*.test.tsx", "**/*.spec.tsx"] },
+    ],
   },
 };
