@@ -12,9 +12,22 @@ const customJestConfig = {
 
   moduleNameMapper: {
     // Handle module aliases (this will be automatically configured for you soon)
-    "^@/components/(.*)$": "<rootDir>/components/$1",
+    "^@/components$": "<rootDir>/src/components/index.ts",
+    "^@/components/(.*)$": "<rootDir>/src/components/$1",
+    "^@/utils/(.*)$": "<rootDir>/src/shared/utils/$1",
+    "^@/pages/(.*)$": "<rootDir>/src/pages/$1",
+    "^@/constants$": "<rootDir>/src/constants/index.ts",
+    "^@/SEO$": "<rootDir>/src/SEO.tsx",
+    "^@styles/(.*)$": "<rootDir>/src/styles/$1",
 
-    "^@/pages/(.*)$": "<rootDir>/pages/$1",
+    "^@/shared/hooks/(.*)$": "<rootDir>/src/shared/hooks/$1",
+    "^@/shared/tests/utils/(.*)$": "<rootDir>/src/shared/tests/utils/$1",
+    "^@/shared/store/(.*)/(.*)$": "<rootDir>/src/shared/store/$1/$2",
+    "^@/shared/store/(.*)$": "<rootDir>/src/shared/store/$1",
+    "^@/shared/store$": "<rootDir>/src/shared/store/index.ts",
+    "^@/shared/store/reducers$": "<rootDir>/src/shared/store/reducers.ts",
+    "^@/shared/services/users$": "<rootDir>/src/shared/services/users",
+    "^@/shared/services/(.*)$": "<rootDir>/src/shared/services/api.ts",
   },
   testEnvironment: "jest-environment-jsdom",
 };
