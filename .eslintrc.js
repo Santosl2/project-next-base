@@ -50,8 +50,14 @@ module.exports = {
     },
   },
   rules: {
+    "react/jsx-props-no-spreading": [
+      true,
+      {
+        exceptions: ["Component", "Input"],
+      },
+    ],
     "import/extensions": [
-      "error",
+      "warn",
       "ignorePackages",
       {
         js: "never",
@@ -61,13 +67,12 @@ module.exports = {
       },
     ],
     "import/no-unresolved": [
-      2,
+      0,
       {
         caseSensitive: false,
       },
     ],
     "@typescript-eslint/no-unused-vars": "off",
-    // or "@typescript-eslint/no-unused-vars": "off",
     "unused-imports/no-unused-imports": "error",
     "unused-imports/no-unused-vars": [
       "warn",
@@ -82,7 +87,7 @@ module.exports = {
       "warn",
       {
         newlinesBetween: "always",
-        groups: ["/^react/", "module", "/^@/", ["parent", "sibling", "index"]],
+        groups: ["/^react/", "module", "/^@//", ["parent", "sibling", "index"]],
         alphabetize: {
           order: "asc",
           ignoreCase: true,
@@ -105,9 +110,18 @@ module.exports = {
     ],
     "import/prefer-default-export": "off",
     "jsx-quotes": ["error", "prefer-double"],
+    "no-undef": "off",
+    "@typescript-eslint/no-var-requires": "warn",
+    "global-require": "warn",
     "import/no-extraneous-dependencies": [
       "error",
-      { devDependencies: ["**/*.test.tsx", "**/*.spec.tsx"] },
+      {
+        devDependencies: [
+          "**/*.test.tsx",
+          "**/*.spec.tsx",
+          "**/*jest.setup.js",
+        ],
+      },
     ],
   },
 };
