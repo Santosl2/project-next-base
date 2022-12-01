@@ -50,12 +50,7 @@ module.exports = {
     },
   },
   rules: {
-    "react/jsx-props-no-spreading": [
-      true,
-      {
-        exceptions: ["Component", "Input"],
-      },
-    ],
+    "react/jsx-props-no-spreading": 0,
     "import/extensions": [
       "warn",
       "ignorePackages",
