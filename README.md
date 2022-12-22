@@ -24,6 +24,7 @@ Just clone this repo or use as a template and enjoy!
       - Button.stories.tsx (Docs)
       - Button.styles.(ts) (Styles)
       - Button.tsx (Component)
+      - Button.spec.tsx (Test)
       - Button.types.tsx (Interface/Types)
       - index.ts (Export Button.tsx)
   - pages (all Pages)
@@ -34,9 +35,8 @@ Just clone this repo or use as a template and enjoy!
     - contexts
       - [ContextName]Context.tsx (Ex.: AuthContext.tsx)
     - services (API Call config)
-    - tests
-      - integration (Integration tests)
-      - unit (Unit Tests)
-      - utils (All utils to tests)
+    - utils (project utils)
+      - tests (utils for tests)
+      - index.ts (export all utils)
 
 Thanks!
