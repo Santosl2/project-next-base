@@ -16,10 +16,22 @@
     "incremental": true,
     "baseUrl": "src",
     "paths": {
-      "@styles/*":["styles/*"],
-      "@/*":["./*"]
-    }
+      "@styles/*": ["styles/*"],
+      "@/*": ["./*"]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "jest.setup.js"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "jest.setup.js",
+    ".next/types/**/*.ts",
+    "postcss.config.js"
+  ],
   "exclude": ["node_modules"]
 }
